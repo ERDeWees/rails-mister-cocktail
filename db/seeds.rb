@@ -19,9 +19,9 @@ puts "Deleted old data"
 
 url = 'https://raw.githubusercontent.com/maltyeva/iba-cocktails/master/recipes.json'
 opened = open(url).read
-api = JSON.parse(opened)
+path = JSON.parse(opened)
 
-api.each do |ct|
+path.each do |ct|
   drinks = Cocktail.create!(name: ct['name'], description: ct['category'], instructions: ct['preparation'])
   ct["ingredients"].each do |i|
     #Ingredients

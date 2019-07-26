@@ -1,0 +1,14 @@
+<h1 class="text-center">Add Dose</h1>
+<div class="row">
+  <div class="col-8 offset-2">
+    <!-- post cocktails/34/doses -->
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
+      <%= f.input :description %>
+      <%= f.association :ingredient %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>
+
+<!-- , collection: @ingredients -->
+<%#= f.association :cocktail, as: :hidden, value: @cocktail.id %>
