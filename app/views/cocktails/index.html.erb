@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Cocktail List</h1>
+  <div class="row">
+    <%= @cocktails.each do |c| %>
+    <div class="col-4">
+      <h3>
+        <%= c.name %>
+      </h3>
+    </div>
+    <%= end %>
+  </div>
+</div>
